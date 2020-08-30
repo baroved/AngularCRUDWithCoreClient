@@ -1,0 +1,28 @@
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Edit Dog</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="id">Dog Id:</label>
+            <input type="text" formControlName="id" placeholder="dog Id" name="id" class="form-control" id="id" readonly="true">
+          </div>
+
+        <div class="form-group">
+            <label for="name">Dog Name:</label>
+            <input type="text" formControlName="name" placeholder="dog Name" name="name" class="form-control" id="name">
+          </div>
+      
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" formControlName="age" placeholder="Age" name="age" class="form-control" id="age">
+          </div>
+      
+          <div class="form-group">
+            <label for="color">Color:</label>
+            <input type="text" formControlName="color" placeholder="Color" name="color" class="form-control" id="color">
+          </div>
+      
+  
+      <button class="btn btn-success" [disabled]="editForm.invalid">Update</button>
+    </form>
+  </div>

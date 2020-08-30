@@ -1,0 +1,28 @@
+<div class="col-md-6 user-container">
+    <h2 style="margin: auto"> Dogs list</h2>
+    <button class="btn btn-danger" style="width:100px" (click)="addNewDog()"> Add dog</button>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Color</th>
+        
+        
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let dog of dogs">
+        <td class="hidden">{{dog.id}}</td>
+        <td>{{dog.name}}</td>
+        <td>{{dog.age}}</td>
+        <td>{{dog.color}}</td>
+        
+        
+        <td><button class="btn btn-success" (click)="deleteDog(dog)"> Delete</button>
+          <button class="btn btn-success" (click)="editDog(dog)" style="margin-left: 20px;"> Edit</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>

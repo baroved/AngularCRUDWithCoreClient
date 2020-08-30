@@ -1,0 +1,22 @@
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Add Dog</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Dog Name:</label>
+        <input type="text" formControlName="name" placeholder="Dog Name" name="name" class="form-control" id="name">
+      </div>
+  
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" formControlName="age" placeholder="Age" name="age" class="form-control" id="age">
+      </div>
+  
+      <div class="form-group">
+        <label for="color">Color:</label>
+        <input type="text" formControlName="color" placeholder="Color" name="color" class="form-control" id="color">
+      </div>
+  
+      
+      <button class="btn btn-success" [disabled]="addForm.invalid">Add</button>
+    </form>
+  </div>

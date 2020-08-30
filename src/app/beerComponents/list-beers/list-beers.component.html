@@ -1,0 +1,27 @@
+<div class="col-md-6 user-container">
+    <h2 style="margin: auto"> Beers list</h2>
+    <button class="btn btn-danger" style="width:100px" (click)="addNewBeer()"> Add beer</button>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Name</th>
+        <th>CountOfAlcohol</th>
+        <th>price</th>
+        
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let beer of beers">
+        <td class="hidden">{{beer.id}}</td>
+        <td>{{beer.name}}</td>
+        <td>{{beer.countOfAlcohol}}%</td>
+        <td>{{beer.price}}$</td>
+        
+        
+        <td><button class="btn btn-success" (click)="deleteBeer(beer)"> Delete</button>
+          <button class="btn btn-success" (click)="editBeer(beer)" style="margin-left: 20px;"> Edit</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
